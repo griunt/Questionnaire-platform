@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Microsoft YaHei","Helvetica Neue", "Helvetica", Arial, sans-serif;
+  box-sizing: border-box; }
+
+body {
+  background-color: #EFEFEF; }
+
+header {
+  width: 100%;
+  height: 45px;
+  background-color: #EE7419;
+  color: white; }
+header * {
+  margin-top: 10px;
+  cursor: pointer;
+  display: inline-block; }
+header div {
+  margin-left: 20px;
+  border-radius: 11px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  color: #EE7419;
+  text-align: center; }
+header h3 {
+  font-size: 20px;
+  font-weight: 600; }
+header h4 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: 10px; }
+
+#main {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  width: 95%;
+  background-color: white;
+  box-shadow: 0 0 5px gray;
+  line-height: 2; }
+
+#new-build-qn-head {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 3;
+  border-bottom: 2px solid #EFEFEF; }
+
+#new-build-content div {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px; }
+#new-build-content div label {
+  display: block;
+  margin-left: 20px; }
+#new-build-content div input {
+  margin-right: 10px; }
+#new-build-content div textarea {
+  margin-left: 20px;
+  width: 90%;
+  height: 100px; }
+
+#new-build-result-foot {
+  width: 95%;
+  margin: 20px auto 30px auto;
+  border-top: 2px solid #EFEFEF;
+  position: relative;
+  height: 50px; }
+#new-build-result-foot button {
+  width: 95px;
+  height: 25px;
+  background-color: #EE7419;
+  color: white;
+  border: 1px solid #EE7419;
+  border-radius: 3px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+#new-build-result-foot button:hover {
+  box-shadow: 0 0 5px #EE7419; }

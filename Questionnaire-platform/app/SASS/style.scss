@@ -1,0 +1,584 @@
+@charset "utf-8";
+$orange: #EE7419;
+$light-gray :#EFEFEF;
+$light-red: #FCF0E5;
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Microsoft YaHei","Helvetica Neue", "Helvetica", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	position: relative;
+    //overflow: hidden;
+}
+
+%btn {
+    width: 66px;
+    border: 1px solid #777777;
+    border-radius: 2px;
+    background-color: white;
+    color: #777777;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    &:hover {
+        box-shadow: 0 0 5px #cccccc;
+    }
+}
+
+%btnO {
+    width: 95px;
+    height: 25px;
+    background-color: $orange;
+    color: white;
+    border: 1px solid $orange;
+    border-radius: 3px;
+    &:hover {
+        box-shadow: 0 0 5px $orange;
+    }
+}
+
+%contain {
+    width: 1040px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 5px #cccccc;
+    margin-bottom: 50px;
+}
+
+body {
+    background-color: $light-gray;
+}
+
+button {
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    height: 45px;
+    background-color: $orange; 
+    //line-height: 60px;
+    color: white;
+    * {
+        margin-top: 10px;
+        cursor: pointer;
+        display: inline-block;
+    }
+    div {
+        margin-left: 40px;
+        border-radius: 11px;
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        color: $orange;
+        text-align: center;
+    }
+    h3 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    h4 {    
+        font-size: 16px;
+        font-weight: 300;
+        margin-left: 20px;
+    }
+}
+
+#main {
+    width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    color: #626262;
+    font-size: 16px;
+}
+
+/*列表页面*/
+
+#list-page-body {
+    padding-bottom: 15px;
+    padding-top: 20px;
+    & div {
+        height: 50px;
+        line-height: 50px;
+    }
+    &>div:hover {
+        background-color: #FCF0E5;
+    }
+}
+#list-page-head {
+    font-size: 15px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    span ,button{
+        position: absolute;
+    }
+    & span:nth-child(1) {
+        left: 71px;
+    }
+    & span:nth-child(2) {
+        left: 440px;
+    }
+    & span:nth-child(3) {
+        left: 610px;
+    }
+    & span:nth-child(4) {
+        left: 726px;
+   }
+   button {
+       @extend %btnO;
+       left: 904px;
+
+    }
+}
+    
+#list-page-body {
+    width: 100%;
+    background-color: white;
+    &>div {
+        height: 50px;
+        width: 1000px;
+        border-bottom: 1px solid $light-gray;
+        margin: 0 auto;
+        position: relative;
+        span, button, input{
+            position: absolute;
+        }
+        input {
+            left: 24px - 20px;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 13px;    
+            @extend %btn;
+        }
+        & span:nth-child(2) {
+            left: 71px - 20px;
+        }
+        & span:nth-child(3) {
+             left: 440px - 20px;
+             font-size: 14px;
+        }
+        & span:nth-child(4) {
+            left: 610px - 20px;
+        }
+        & span:nth-child(5) {
+            left: 780px - 20px;
+        }
+        & button:nth-child(5){
+            right: 192px + 45px;
+        }
+        & button:nth-child(6){
+            right: 117px + 45px;
+        }
+        & button:nth-child(7){
+            right: 42px + 45px;
+        }
+        & button:nth-child(8){
+            right: 12px;
+        }
+    }
+}
+    
+#list-page-foot {
+    background-color: white;
+    height: 100px;
+    position: relative;
+    * {
+        position: absolute;
+    }
+    input {
+        margin-top: 20px;
+        position: absolute;
+        left: 25px;
+    }
+    span {
+       left: 70px;
+       top: 16px; 
+    }
+    button {
+        margin-top: 14px;
+        left: 120px;
+        @extend %btn;
+    }
+}
+
+/*问卷信息*/
+
+#questionnair-result {
+    background-color: white;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#questionnair-result-head {
+    height: 85px;
+    padding-top: 25px;
+    width: 1000px;
+    border-bottom: 2px solid $light-gray;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+    h3 {
+        font-weight: 600;
+    }
+    h4 {
+        font-weight: 400;
+    }
+    button {
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        font-size: 16px;
+        background-color: white;
+        border: none;
+    }
+    button:hover {
+        font-weight: 600;
+        color: $orange;
+    }
+}
+
+#questionnair-result-content {
+    clear: both;
+    &>div {
+        width: 960px;
+        margin: 10px auto 10px auto;
+        border: 2px solid $light-gray;
+        padding: 15px;
+        position: relative;
+        line-height: 1.5;
+    }
+    /*
+    .question-result-left {
+        display: inline-block;
+        float: left;
+    }
+    &>div:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+    
+    .question-result-right {
+        display: inline-block;
+        top:0;
+        right: 200px;
+        height: 100%;
+        width: 100px;
+    }
+    */
+    h4 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    ul>li {
+        list-style: none;
+        margin-left: 20px;
+    }
+}
+
+
+#new-build-result-foot, #questionnair-result-foot {
+    width: 1000px;
+    height: 100px;
+    margin: 10px auto;
+    border-top: 2px solid $light-gray;
+    position: relative;
+    button {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @extend %btnO;
+    }
+}
+
+/*
+.question-result-right {
+    float: right;
+    margin-right: 200px;
+    margin-bottom: 15px;
+    &>span {
+        top: 15px;
+    }   
+    &>div {
+        width: 200px;
+        height: 10px;
+        background-color: white;
+        margin-top: 12px;
+        border: 1px solid gray;
+        position: relative;
+        span {
+            position: absolute;
+            font-size: 12px;
+            right: -30px;
+            top:-6px;;
+        } 
+    }
+    &>div:nth-child(2) {
+       margin-top: 9px;
+    }
+    &>div>div {
+        height: 9px;
+        width: 0%;
+        background-color: $orange;
+        display: inline-block;
+        position: absolute;
+        top:0;
+    }
+}
+*/
+
+// 新建页面
+#new-build {
+    @extend %contain;
+    height: 300px;
+    box-shadow: 0 0 3px gray;
+    position: relative;
+    button {
+        width: 150px;
+        height: 50px;
+        font-size: 20px;
+        @extend %btnO;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+// 新建页面具体
+#new-build-qn {
+    @extend %contain;
+}
+
+#new-build-qn-head {
+    h3 {
+        width: 960px;
+        line-height: 3;
+        text-align: center;
+    }
+    h3:hover {
+        background-color: $light-red;
+        cursor: pointer;
+    }
+    input {
+        background-color: $light-gray;
+        position: absolute;
+        height: 50px;
+        width: 960px;
+        top: 20px;
+       // left: 480-75px;
+        left: 20px;
+        border: none;
+        text-align: center;
+        line-height: 3;
+    }
+    position: relative;
+    border-bottom: 2px solid #CCCCCC;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+
+#new-build-btns {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid #CBCBCB;
+    position: relative;
+    div:first-child {
+        //padding: 20px;
+        button {
+            border: 1px solid #CBCBCB;
+            background-color: $light-gray;
+            width: 70px;
+            height: 30px;
+            margin: 20px 10px;
+            &:hover {
+                box-shadow: 0 0 3px gray;
+            }
+        }
+    }
+    div:last-child {
+        width: 100%;
+        background-color: $light-gray;
+        padding: 20px;
+        button {
+            background-color: $light-gray;
+            border: none;
+            &:hover {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+// 新建或者编辑部分的底部
+#new-build-qn-foot {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    border-top: 2px solid #CCCCCC;
+    padding: 25px;
+    padding-bottom: 50px;
+    input {
+        height: 30px;
+        width: 170px;
+        margin-left: 10px;
+        padding-left: 6px;
+    }
+    button {
+        @extend %btn;
+        width: 100px;
+        float: right;
+        margin-right: 30px;
+        padding: 3px 10px 3px 10px;
+    }
+}
+
+// 新建或者编辑页面的内容部分
+#new-build-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    padding: 20px 20px;
+    line-height: 2;
+    h4 {
+        white-space: pre-wrap;
+    }
+    label {
+        display: block;
+    }
+    &>div {
+        position: relative;
+        padding: 15px;
+        input {
+            margin-right: 5px;
+        }
+        label, textarea {
+            margin-left: 30px;
+        } 
+        textarea {
+            width: 400px;
+            height: 150px;
+        }
+    }
+    &>div:hover {
+        background-color: #FCF0E5;
+    }
+    ul {
+        margin-left: 700px;
+    }
+    li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+        a {
+            cursor: pointer;
+        }
+        a:hover {
+            text-shadow: 0 0 2px #626262;
+        }
+    }
+    li:last-child {
+        a:hover {
+            color:red;
+            text-shadow: 0 0 2px red;
+        }
+    }
+}
+
+.new-build-ne {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+}
+
+// 遮罩层
+
+.darken {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    &>div:first-child {
+        //top:0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: black;
+        opacity: 0.5;
+    }
+    .float-out {
+        position: absolute;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+	    width: 400px;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+        font-size: 14px;
+        &>div:first-child {
+            width: 100%;
+            height: 50px;
+            padding: 15px;
+            background-color: $light-gray;
+            font-weight: 600;
+            color: #626262;
+            border-radius: 5px 5px 0 0;
+        }
+        b {
+            float: right;
+            cursor: pointer;
+            font-family: "arial";
+            &:hover {
+                color: red;
+            }
+        }
+        &>div:nth-child(2) {
+            line-height: 2;
+            padding: 15px;
+            label {
+                display: block;
+            }
+            label:last-child {
+                margin-left: 14px*2;
+            }
+            input {
+                margin-top: 17px;
+                margin-left: 15px;
+            }    
+        }
+        &>div:nth-child(3) {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+            &>button:first-child {
+                @extend %btnO;
+                width: 70px;
+                margin-right: 15px;
+            }
+            &>button:last-child {
+                @extend %btn;
+                width: 70px;
+            }
+        }
+
+    }
+}

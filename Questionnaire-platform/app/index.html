@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>问卷</title>
+	<link rel="stylesheet" href="DIST/css/style.min.css" type="text/css">
+	<link rel="stylesheet" href="CSS/cal.css" type="text/css">
+</head>
+<body>
+	<header>
+		<div>?</div>
+		<h3>问卷管理</h3>
+		<h4>我的问卷</h4>
+	</header>
+	<div id="main">
+		<!--主页面-->
+		<!--<div id="list-page">
+			<div id="list-page-head">
+				<span>标题</span>
+				<span>时间</span>
+				<span>状态</span>
+				<span>操作</span>
+				<button>+新建问卷</button>
+			</div>
+			<div id="list-page-body">
+				<div>
+					<input type="checkbox">
+					<span>这是我的第一份问卷</span>
+					<span>2016-04-12 20:46:52</span>
+					<span>发布中</span>
+					<button>编辑</button>
+					<button>删除</button>
+					<button>查看问卷</button>
+				</div>
+				<div>
+					<input type="checkbox">
+					<span>这是我的第一份问卷</span>
+					<span>2016-04-10 20:46:52</span>
+					<span>未发布</span>
+					<button>编辑</button>
+					<button>删除</button>
+					<button>查看问题</button>
+				</div>
+				<div>
+					<input type="checkbox">
+					<span>这是我的第一份问卷</span>
+					<span>2016-04-12 20:46:52</span>
+					<span>已结束</span>
+					<button>编辑</button>
+					<button>删除</button>
+					<button>查看问卷</button>
+				</div>
+			</div>
+			<div id="list-page-foot">
+				<input type="checkbox">
+				<span>全选</span>
+				<button>删除</button>
+			</div>
+		</div>-->
+		<!--内容页面-->
+		<!--<div id="questionnair-result">
+			<div id="questionnair-result-head">
+				<button>返回</button>
+				<h3>这里是标题</h3>
+				<h4>次统计分析值包含完整的数据</h4>
+			</div>
+			<div id="questionnair-result-content">
+				<div>
+					<div class="question-result-left">
+						<h4>Q1单选题</h4>
+						<ul>
+							<li>选项一</li>
+							<li>选项二</li>
+						</ul>
+					</div>
+					<div class="question-result-right">
+						<span>数据占比</span>
+						<div>
+							<div style="width:87%;"></div><span>87%</span>
+						</div>
+						<div>
+							<div style="width:65%;"></div><span>65%</span>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="question-result-left">
+						<h4>Q2多选题</h4>
+						<ul>
+							<li>选项一</li>
+							<li>选项二</li>
+							<li>选项三</li>
+							<li>选项四</li>
+						</ul>
+					</div>
+					<div class="question-result-right">
+						<span>数据占比</span>
+						<canvas id="bingtu"  width="224" height="130" ></canvas>
+					</div>
+				</div>
+				<div>
+					<div class="question-result-left">
+						<h4>Q3单选题</h4>
+						<ul>
+							<li>选项一</li>
+							<li>选项二</li>
+						</ul>
+					</div>
+					<div class="question-result-right">
+						<span>数据占比</span>
+						<div>
+							<div style="width:85%;"></div><span>85%</span>
+						</div>
+						<div>
+							<div style="width:75%;"></div><span>75%</span>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="question-result-left">
+						<h4>Q4文本题</h4>
+					</div>
+					<div class="question-result-right">
+						<span>有效数据占比</span>
+						<div>
+							<div style="width:60%;"></div><span>60%</span>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div id="questionnair-result-foot">
+				<button>返回</button>
+			</div>
+		</div>-->
+		<!--新建页面-->
+		<!--<div id="new-build">
+			<button>+ 新建问卷</button>
+		</div>-->
+		<!--新建页面具体-->
+		<!--<div id="new-build-qn">
+			<div id="new-build-qn-head">
+				<h3>这里是标题</h3>
+				<input type="text">
+			</div>
+			<div id="new-build-content">
+				<div>
+					<h4>Q1  单选题</h4>
+					<label class="new-build-ne"><input type="checkbox">此题是否必填</label>
+					<label for=""><input type="radio" name="1">选项一</label>
+					<label for=""><input type="radio" name="1">选项二</label>
+					<label for=""><input type="radio" name="1">选项三</label>
+					<div>
+						<ul>
+							<li><a>上移</a></li>
+							<li><a>下移</a></li>
+							<li><a>复用</a></li>
+							<li><a>删除</a></li>
+						</ul>
+					</div>
+				</div>
+				<div>
+					<h4>Q2  多选题</h4>
+					<label class="new-build-ne"><input type="checkbox">此题是否必填</label>
+					<label for=""><input type="checkbox" name="2">选项一</label>
+					<label for=""><input type="checkbox" name="2">选项二</label>
+					<label for=""><input type="checkbox" name="2">选项三</label>
+					<div>
+						<ul>
+							<li><a>上移</a></li>
+							<li><a>下移</a></li>
+							<li><a>复用</a></li>
+							<li><a>删除</a></li>
+						</ul>
+					</div>
+				</div>
+				<div>
+					<h4>Q3  文本题</h4>
+					<label class="new-build-ne"><input type="checkbox">此题是否必填</label>
+					<textarea></textarea>
+					<div>
+						<ul>
+							<li><a>上移</a></li>
+							<li><a>下移</a></li>
+							<li><a>复用</a></li>
+							<li><a>删除</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="new-build-btns">
+				<div>
+					<button>单选</button>
+					<button>多选</button>
+					<button>文本框</button>
+				</div>
+				<div>
+					<button>+ 添加问题</button>
+				</div>
+			</div>
+			<div id="new-build-qn-foot">
+				<label for="">问卷截止日期</label>
+				<input type="text">
+				<div class="calendar1">
+					<div class="container">
+						<div class="cal-head">
+							<div></div>
+							<select>
+								<option value="2016">2016</option>
+								<option value="2017">2017</option>
+								<option value="2018">2018</option>
+								<option value="2019">2019</option>
+								<option value="2020">2020</option>
+							</select>
+							<select>
+								<option value="0">JAN</option>
+								<option value="1">FEB</option>
+								<option value="2">MAR</option>
+								<option value="3">APR</option>
+								<option value="4">MAY</option>
+								<option value="5">JUN</option>
+								<option value="6">JUL</option>
+								<option value="7">AUG</option>
+								<option value="8">SEP</option>
+								<option value="9">OCT</option>
+								<option value="10">NOV</option>
+								<option value="11">DEC</option>
+							</select>
+							<div></div>
+						</div>
+						<table>
+							<tr>
+								<th>Su</th>
+								<th>Mo</th>
+								<th>Tu</th>
+								<th>We</th>
+								<th>Th</th>
+								<th>Fr</th>
+								<th>Sa</th>
+							</tr>
+							<tbody>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>4</td>
+									<td>5</td>
+									<td>6</td>
+									<td>7</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2</td>
+									<td>3</td>
+									<td>4</td>
+									<td>5</td>
+									<td>6</td>
+									<td>7</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2</td>
+									<td>3</td>
+									<td>4</td>
+									<td>5</td>
+									<td>6</td>
+									<td>7</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2</td>
+									<td>3</td>
+									<td>4</td>
+									<td>5</td>
+									<td>6</td>
+									<td>7</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2</td>
+									<td>3</td>
+									<td>4</td>
+									<td>5</td>
+									<td>6</td>
+									<td>7</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2</td>
+									<td>3</td>
+									<td>4</td>
+									<td>5</td>
+									<td>6</td>
+									<td>7</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<button>发布问卷</button>
+				<button>保存问卷</button>
+			</div>
+		</div>
+	</div>-->
+	<!--遮罩层-->
+	<!--<div class="darken">
+		<div></div>
+		<div class="float-out">
+			<div>提示<b>X</b></div>
+			<div>
+				<p>这里是一段介绍的信息，可以供用户填写。这里是一段介绍的信息，可以供用户填写。</p>
+				<label>输入题目标题<input type="text"></label>
+				<label>输入选项<input type="text"></label>
+			</div>
+			<div>
+				<button>确认</button>
+				<button>取消</button>
+			</div>
+		</div>-->
+	</div>
+	<script src="JS/require.js" data-main="DIST/js/index.min.js"></script>
+	<!--<script src="JS/bingtu.js"></script>-->
+</body>
+</html>

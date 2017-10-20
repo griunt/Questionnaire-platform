@@ -1,0 +1,78 @@
+/*日历组件样式*/
+.cal-container {
+	width: 280px;
+	background-color: #EEEEEE;
+	color: #999999;
+	margin-top: 10px;
+	box-shadow: 0 0 5px #999999;
+}
+
+.cal-container * {
+	background-color: white;
+}
+
+.cal-head {
+	height: 40px;
+	position: relative;
+	text-align: center;
+}
+
+.cal-head select {
+	margin-top: 10px;
+	color: #999999;
+}
+
+.cal-head div:first-child {
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-right: 10px solid #999999;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	cursor: pointer;
+}
+
+.cal-head div:last-child {
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-left: 10px solid #999999;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+}
+
+.cal-container table {
+	border-collapse: collapse;
+}
+
+.cal-container tr * {
+	width: 40px;
+	height: 30px;
+	text-align: center;
+}
+
+.cal-container .active {
+	background-color: red;
+	cursor: pointer;
+	animation: myChange 0.5s forwards;
+}
+
+.cal-container .nonactive {
+	color: #DCE1E7;
+	cursor: pointer;
+}
+
+@keyframes myChange {
+	from {
+		background-color: white;
+		color: #999999;
+	}
+	to {
+		background-color: #999999;
+		color: white;
+		box-shadow: 0 0 5px #999999;
+	}
+}
